@@ -1,5 +1,61 @@
-html
-ANORA
-CHARTS  ☰ 
-HOT 100 CHART BEAT ARTIST CHART ALBUM CHART SALES CHART HISTORY RECORDS UPDATE
-ANORA CHARTS · Personal music chart system
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANORA CHARTS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="#/" class="brand-link">ANORA CHARTS</a>
+    </div>
+
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav id="mainNav" class="main-nav">
+      <a href="#/">HOT 100</a>
+      <a href="#/chart-beat">CHART BEAT</a>
+      <a href="#/artists">ARTIST CHART</a>
+      <a href="#/albums">ALBUM CHART</a>
+      <a href="#/sales">SALES</a>
+      <a href="#/history">CHART HISTORY</a>
+      <a href="#/records">RECORDS</a>
+      <a href="#/update">UPDATE</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section class="hero">
+      <h1>ANORA CHARTS</h1>
+      <p>Personal music chart system</p>
+    </section>
+
+    <div id="page"></div>
+  </main>
+
+  <footer>
+    ANORA CHARTS · Personal music chart system
+  </footer>
+
+  <script src="js/anora.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", function () {
+          mainNav.classList.toggle("open");
+        });
+      }
+    });
+  </script>
+</body>
+</html>
